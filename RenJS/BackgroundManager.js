@@ -3,15 +3,11 @@ function BackgroundManager(){
     this.backgrounds = {};
     this.current = null;
 
-    this.add = function(name,animated,framerate){
-        this.backgrounds[name] = RenJS.storyManager.backgroundSprites.create(game.world.centerX,game.world.centerY,name);
+    this.add = function(name,image){
+        this.backgrounds[name] = RenJS.storyManager.backgroundSprites.create(game.world.centerX,game.world.centerY,(image ? image : name));
         this.backgrounds[name].name = name;
         this.backgrounds[name].anchor.set(0.5);
         this.backgrounds[name].alpha = 0;
-        if (animated){
-            this.backgrounds[name].animated = true;
-            this.backgrounds[name].animations.add("run",null,framerate);
-        }
     }
 
     this.set = function (name) {
@@ -20,9 +16,6 @@ function BackgroundManager(){
         }
         this.current = this.backgrounds[name];
         this.current.alpha = 1;
-        if (this.current.animated){
-            this.current.animations.play("run",null,true);
-        }
     }
 
     this.show = function(name,transition){   
@@ -30,9 +23,6 @@ function BackgroundManager(){
         this.current = name ? this.backgrounds[name] : null;
         // console.log("showing bg "+name);
         // debugger;
-        if (this.current.animated){
-            this.current.animations.play("run",null,true);
-        }
         return transition(oldBg,this.current,{x:game.world.centerX,y:game.world.centerY},1,RenJS.storyManager.backgroundSprites);        
     }
 

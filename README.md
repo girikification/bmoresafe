@@ -1,3 +1,6 @@
-# RenJS Quickstart
+# RenJS
 
-RenJS is a Visual Novel javascript library, powered by PhaserJS. Find out how to use it [here](https://lunafromthemoon.itch.io/renjs). If you're ready to start developing, [here](https://lunafromthemoon.github.io/RenJS/) is the API documentation.
+RenJS is a javascript library to make Visual Novels. It's easy for writers to use and easy for programmers to extend. Inspired by RenPy, powered by Phaser.
+
+[Documentation here.](https://lunafromthemoon.github.io/RenJS/)
+[Tutorial game here.](https://lunafromthemoon.itch.io/renjs)

@@ -88,12 +88,7 @@ var preloadStory = {
 
     //preload backgrounds
     _.each(RenJS.setup.backgrounds,function(filename,background){
-        var str = filename.split(" ");
-        if (str.length == 1){
-            game.load.image(background, preparePath(filename));
-        } else {
-            game.load.spritesheet(background, preparePath(str[0]), parseInt(str[1]),parseInt(str[2]));
-        }
+        game.load.image(background, preparePath(filename));
     });
     //preload cgs
     _.each(RenJS.setup.cgs,function(cgs,key){

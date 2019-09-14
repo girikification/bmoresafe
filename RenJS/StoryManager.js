@@ -6,14 +6,7 @@ function StoryManager(){
         //load backgrounds
         this.backgroundSprites = game.add.group();
         _.each(RenJS.setup.backgrounds,function(filename,background){
-            var str = filename.split(" ");
-            if (str.length == 1){
-                RenJS.bgManager.add(background);    
-            } else {
-                var framerate = str.length == 4 ? parseInt(str[3]) : 16;
-                RenJS.bgManager.add(background,true,framerate);                
-            }
-            
+            RenJS.bgManager.add(background,background);
         });
         //load characters
         this.behindCharactersSprites = game.add.group();
