@@ -76,8 +76,8 @@ finalAct:
   - effect SHOWTITLE: 
     title: Chapter 3
     subtitle: Final Act
-  - show netflix: WITH FADE
   - show invisible: normal
+  - show netflix: WITH FADE
   - invisible says: 2 hours has passed. Jennifer and Dylan are watching Netflix while eating cookies.
   - invisible says: Dylan continues to vape and Jennifer gets a little curious
   - show dylan: WITH FADE AT RIGHT
